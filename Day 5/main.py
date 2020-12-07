@@ -4,23 +4,23 @@ puzzleInput = inputFile.readlines()
 for i in range(len(puzzleInput)):
     puzzleInput[i] = puzzleInput[i].rstrip("\n")
 
-# # Part One
-# highestSeatID = 0
-# for string in puzzleInput:
-#     # find the seat row
-#     row = string[:7]
-#     row = row.replace("F", "0").replace("B", "1")
-#     row = int(row, 2)
+# Part One
+highestSeatID = 0
+for string in puzzleInput:
+    # find the seat row
+    row = string[:7]
+    row = row.replace("F", "0").replace("B", "1")
+    row = int(row, 2)
 
-#     # findt the seat column
-#     column = string[7:]
-#     column = column.replace("L", "0").replace("R", "1")
-#     column = int(column, 2)
+    # findt the seat column
+    column = string[7:]
+    column = column.replace("L", "0").replace("R", "1")
+    column = int(column, 2)
 
-#     seatID = row*8+column
-#     highestSeatID = max(highestSeatID, seatID)
-# print(highestSeatID)
-# # Part One
+    seatID = row*8+column
+    highestSeatID = max(highestSeatID, seatID)
+print(highestSeatID)
+# Part One
 
 
 # Part Two

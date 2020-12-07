@@ -29,21 +29,21 @@ passports.append(passport)
 
 
 # Part One
-# validCounter = 0
-# for counter, passport in enumerate(passports):
-#     # checking the fields that the passport has
-#     missing = requiredFields.copy()
-#     for key in passport.keys():
-#         if key in requiredFields:
-#             missing.remove(key)
+validCounter = 0
+for counter, passport in enumerate(passports):
+    # checking the fields that the passport has
+    missing = requiredFields.copy()
+    for key in passport.keys():
+        if key in requiredFields:
+            missing.remove(key)
     
-#     # checking if the passport has all of the required fields
-#     if (len(missing) > 1):
-#         continue
-#     if (len(missing) == 1 and missing[0] != "cid"):
-#         continue
-#     validCounter += 1
-# print(validCounter)
+    # checking if the passport has all of the required fields
+    if (len(missing) > 1):
+        continue
+    if (len(missing) == 1 and missing[0] != "cid"):
+        continue
+    validCounter += 1
+print(validCounter)
 # Part One
 
 

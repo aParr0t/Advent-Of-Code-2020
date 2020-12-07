@@ -5,15 +5,15 @@ for i in range(len(inputStrings)):
     inputStrings[i] = inputStrings[i].rstrip("\n")
 
 
-# # Part One
-# slopes = [[3, 1]]
-# # Part One
+# Part One
+slopes = [[3, 1]]
+# Part One
 
 # Part Two
 slopes = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]]
 # Part Two
 
-
+# the code below works for both parts
 productOfTrees = 1
 for slope in slopes:
     x, y, counter = 0, 0, 0
