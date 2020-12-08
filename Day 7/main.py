@@ -6,7 +6,6 @@ for i in range(len(puzzleInput)):
     puzzleInput[i] = puzzleInput[i].rstrip("\n")
 
 bagTreeList = {}
-
 for line in puzzleInput:
     # get parent bag
     parentBag = line[:line.index("contain")-6]
@@ -27,5 +26,8 @@ for line in puzzleInput:
     bagTreeList[parentBag] = childrenBags
 
 
-for key, value in bagTreeList.items():
-    print(key, value)
+# for line in bagTreeList:
+
+
+# for key, value in bagTreeList.items():
+#     print(key, value)
