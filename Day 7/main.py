@@ -18,9 +18,13 @@ puzzleInput = inputFile.readlines()
 for i in range(len(puzzleInput)):
     puzzleInput[i] = puzzleInput[i].rstrip("\n")
 
+<<<<<<< HEAD
 
 # Part One and Two
 bagTree = {}
+=======
+bagTreeList = {}
+>>>>>>> 8b589dc6f3ed126d3b15a6c152d98b432e13d8d8
 for line in puzzleInput:
     # get parent bag
     parentBag = line[:line.index("contain")-6]
@@ -69,6 +73,7 @@ colors.remove("shiny gold")
 print("Part One answer: " + str(len(colors)))
 
 
+<<<<<<< HEAD
 # Count the number of individual bags inside a bag
 bagCount = []
 def countBagsInsideBag(bagName, multiplier):
@@ -82,3 +87,10 @@ def countBagsInsideBag(bagName, multiplier):
 countBagsInsideBag("shiny gold", 1)
 print("Part Two answer : " + str(sum(bagCount)))
 # Part One and Two
+=======
+# for line in bagTreeList:
+
+
+# for key, value in bagTreeList.items():
+#     print(key, value)
+>>>>>>> 8b589dc6f3ed126d3b15a6c152d98b432e13d8d8
