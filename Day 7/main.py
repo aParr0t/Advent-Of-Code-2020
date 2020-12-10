@@ -18,13 +18,9 @@ puzzleInput = inputFile.readlines()
 for i in range(len(puzzleInput)):
     puzzleInput[i] = puzzleInput[i].rstrip("\n")
 
-<<<<<<< HEAD
 
 # Part One and Two
 bagTree = {}
-=======
-bagTreeList = {}
->>>>>>> 8b589dc6f3ed126d3b15a6c152d98b432e13d8d8
 for line in puzzleInput:
     # get parent bag
     parentBag = line[:line.index("contain")-6]
