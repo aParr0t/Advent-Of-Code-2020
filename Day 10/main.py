@@ -23,9 +23,13 @@ def createTree(num):
         return
     if num not in tree.keys():
         tree[num] = []
-    tree[num] = list(set(tree[num]+ arrangements))
+    tree[num] = tree[num] + arrangements
     for e in arrangements:
         createTree(e)
+
+def cleanTree():
+    for e in tree.keys():
+        tree[e] = list(set(tree[e]))
 
 highestNum = max(puzzleInput)
 arrangementCount = [0]
@@ -37,6 +41,7 @@ def countArrangements(num):
         countArrangements(e)
 
 createTree(0)
+cleanTree()
 # print(tree)
 countArrangements(0)
 print(arrangementCount)
