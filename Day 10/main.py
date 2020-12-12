@@ -4,7 +4,6 @@ puzzleInput = inputFile.readlines()
 for i in range(len(puzzleInput)):
     puzzleInput[i] = int(puzzleInput[i].rstrip("\n"))
 puzzleInput.sort()
-print(puzzleInput)
 
 # # Part One
 # counts = {1 : 1, 2 : 0, 3 : 1}
@@ -20,10 +19,25 @@ print(puzzleInput)
 tree = {}
 def createTree(num):
     arrangements = [x for x in puzzleInput if x <= num+3 and x > num]
+    if len(arrangements) == 0:
+        return
+    if num not in tree.keys():
+        tree[num] = []
+    tree[num] = list(set(tree[num]+ arrangements))
     for e in arrangements:
-        if e not in tree.keys():
-            tree[e] = []
-        tree[e].append()
+        createTree(e)
 
-for i in range(4):
-    findArrangements()
+highestNum = max(puzzleInput)
+arrangementCount = [0]
+def countArrangements(num):
+    if num == highestNum:
+        arrangementCount[0] += 1
+        return
+    for e in tree[num]:
+        countArrangements(e)
+
+createTree(0)
+# print(tree)
+countArrangements(0)
+print(arrangementCount)
+
